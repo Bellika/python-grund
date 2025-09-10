@@ -1,0 +1,132 @@
+# Grundläggande
+git init                          # Skapa ett nytt lokalt Git-repo
+git clone <url>                   # Klona ett befintligt repo från remote
+git status                        # Visa status på filer och branch
+git help <kommando>               # Visa hjälp för ett specifikt Git-kommando
+
+# Konfiguration
+git config --global user.name "Namn"        # Ställ in användarnamn globalt
+git config --global user.email "mejl"       # Ställ in e-post globalt
+git config --global core.editor "vim"       # Ställ in standard-editor (t.ex. vim)
+git config --global merge.tool "meld"      # Ställ in merge-tool
+git config --global diff.tool "meld"       # Ställ in diff-tool
+git config --global color.ui auto           # Aktivera färg i terminal
+git config --global alias.co checkout       # Alias för checkout
+git config --global alias.br branch         # Alias för branch
+git config --global alias.ci commit         # Alias för commit
+git config --global alias.st status         # Alias för status
+git config --list                            # Lista all konfiguration
+git config --global --unset user.name       # Ta bort inställning för namn
+git config --global --unset user.email      # Ta bort inställning för email
+git config --system --list                   # Visa systemkonfiguration
+git config --local --list                    # Visa repo-specifik konfiguration
+
+# Hantera filer
+git add <fil>                     # Lägg till en specifik fil i staging area
+git add .                         # Lägg till alla ändrade filer i staging
+git rm <fil>                      # Ta bort en fil från repo och staging
+git rm --cached <fil>             # Sluta tracka fil men behåll den lokalt
+git mv gammalt nytt               # Byt namn eller flytta en fil
+
+# Commits
+git commit -m "Meddelande"        # Skapa en commit med meddelande
+git commit -a -m "Meddelande"     # Lägg till ändrade filer automatiskt och commit
+git commit --amend                # Ändra senaste commit
+git show <commit>                 # Visa information om en specifik commit
+git log                           # Visa commit-historik
+git log --oneline                 # Visa commit-historik kompakt
+git log -p                        # Visa commit-historik med diff
+git shortlog -sn                  # Visa antal commits per författare
+
+# Branches och Tags
+git branch                        # Lista alla lokala branches
+git branch <namn>                 # Skapa en ny branch
+git switch <branch>               # Byt till en annan branch
+git checkout <branch>             # Byt branch (äldre syntax)
+git switch -c <namn>              # Skapa och byt till en ny branch
+git branch -d <namn>              # Ta bort en branch som är mergad
+git branch -D <namn>              # Tvinga borttagning av en branch
+git tag <namn>                    # Skapa en lättviktig tagg
+git tag -a v1.0 -m "Version 1.0"  # Skapa annoterad tagg med meddelande
+git show v1.0                     # Visa information om en tagg
+
+# Merge och Rebase
+git merge <branch>                # Slå ihop en annan branch till nuvarande branch
+git merge --no-ff <branch>       # Slå ihop med merge commit även om fast-forward är möjlig
+git rebase <branch>               # Flytta nuvarande branch ovanpå annan branch
+git rebase -i HEAD~3              # Interaktiv rebase på de senaste tre commits
+git rebase --continue             # Fortsätt rebase efter konfliktlösning
+git rebase --abort                # Avbryt pågående rebase
+
+# Remote-repo hantering
+git remote -v                     # Lista remotes och deras URL:er
+git remote add origin <url>       # Lägg till en remote som kallas "origin"
+git remote remove <namn>          # Ta bort en remote
+git remote rename gammalt nytt    # Byt namn på en remote
+git remote set-url origin <url>   # Ändra URL för remote "origin"
+git fetch                         # Hämta uppdateringar från remote utan merge
+git fetch --all --prune           # Hämta alla remotes och städa bort gamla branches
+git pull                          # Hämta och merge från remote
+git pull --rebase                 # Hämta och rebase istället för merge
+git push                          # Skicka lokala commits till remote
+git push -u origin <branch>       # Pusha branch och sätt upstream
+git push origin --delete <branch> # Ta bort remote branch
+git push --tags                   # Pusha taggar till remote
+
+# Stash och Reset
+git stash                         # Lägg undan ocommittade ändringar temporärt
+git stash list                    # Visa alla sparade stashar
+git stash pop                     # Återställ senaste stash och ta bort den
+git stash apply                   # Återställ stash men behåll den sparad
+git reset <fil>                   # Ta bort fil från staging area
+git reset --soft HEAD~1           # Ångra senaste commit men behåll ändringar staged
+git reset --mixed HEAD~1          # Ångra commit och lägg tillbaka ändringar i working dir
+git reset --hard HEAD~1           # Ångra commit och släng alla ändringar
+
+# Inspektera och debugga
+git diff                          # Visa skillnader mellan working dir och staging
+git diff --staged                 # Visa skillnader mellan staging och senaste commit
+git show <commit>                 # Visa detaljer för commit
+git blame <fil>                   # Visa vem som ändrade varje rad i fil
+git grep "text"                   # Sök efter text i repo
+git ls-files                      # Lista alla trackade filer
+git rev-parse HEAD                # Visa SHA för HEAD
+git reflog                        # Visa alla HEAD-rörelser (tidigare commits)
+
+# Städa
+git clean -n                      # Visa vilka otrackade filer som skulle tas bort
+git clean -f                      # Ta bort otrackade filer
+git clean -fd                     # Ta bort otrackade filer och kataloger
+
+# Avancerade kommandon
+git cherry-pick <commit>          # Kopiera en commit till nuvarande branch
+git revert <commit>               # Skapa en ny commit som backar en specifik commit
+git bisect start                  # Starta binary search för att hitta buggar
+git bisect good <commit>          # Markera commit som fungerande
+git bisect bad <commit>           # Markera commit som trasig
+git archive --format=zip HEAD > fil.zip  # Skapa zip-arkiv av aktuell commit
+git describe --tags               # Beskriv commit med närmaste tagg
+git submodule add <url> path      # Lägg till submodule
+git submodule update --init       # Initiera submodules
+
+# Navigering mellan commits och branches
+git checkout HEAD^                # Gå en commit bakåt
+git checkout HEAD~2               # Gå två commits bakåt
+git show-branch                   # Visa branch-historik
+git rev-list --all                # Lista alla commits i repo
+
+# SSH och autentisering
+ssh-keygen -t rsa -b 4096 -C "din.email@example.com"   # Skapa ny SSH-nyckel
+ssh-add ~/.ssh/id_rsa                                     # Lägg till SSH-nyckel i ssh-agent
+ssh -T git@github.com                                      # Testa anslutning till GitHub via SSH
+cat ~/.ssh/id_rsa.pub                                     # Visa public key för kopiering till GitHub/GitLab
+eval "$(ssh-agent -s)"                                    # Starta ssh-agent
+git remote set-url origin git@github.com:<user>/<repo>.git  # Byt remote-url till SSH
+
+# Extra Git-konfigurationer
+git config --global pull.rebase true          # Standardinställning: rebase vid pull
+git config --global core.autocrlf input       # Hantera radslut på olika OS
+git config --global core.safecrlf true        # Varning vid CRLF-problem
+git config --global merge.ff false            # Disable fast-forward merges som standard
+git config --global push.default simple       # Standard push beteende
+
