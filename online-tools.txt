@@ -7,3 +7,14 @@ https://exercism.org/tracks/python/exercises
 Codewars - python exercises
 https://www.codewars.com/
 
+
+----- PROJECTS -----
+
+Beginner projects: 
+
+https://github.com/jorgegonzalez/beginner-projects
+
+More advanced projects:
+
+https://github.com/karan/Projects#data-structures
+
