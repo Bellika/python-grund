@@ -1,7 +1,7 @@
 Gruppuppgift: Python-projekt
 Gruppstorlek: 4 personer
- Redovisning: 15/11 (på plats i skolan)
- Inlämning: 17/11 23:59 (kod + dokumentation via GitHub)
+ Redovisning: 15/10 (på plats i skolan)
+ Inlämning: 17/10 23:59 (kod + dokumentation via GitHub)
 
 Uppgiftens syfte
 Syftet är att omsätta kursens moment i praktiken genom att i grupp utveckla ett Python-baserat projekt. Projektet ska vara fritt valt, men varje medlem i gruppen ska:

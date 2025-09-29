@@ -13,8 +13,8 @@ Allan
 Grupp 3:
 Emma
 Emmy
-Viktor
 Ilbron
+PLATS LEDIG
 
 Grupp 4:
 Rasmus
@@ -50,3 +50,4 @@ Grupp 9:
 Nahuel
 Emil 
 Robin
+Viktor
