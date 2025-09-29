@@ -1,0 +1,120 @@
+Gruppuppgift: Python-projekt
+Gruppstorlek: 4 personer
+ Redovisning: 15/11 (på plats i skolan)
+ Inlämning: 17/11 23:59 (kod + dokumentation via GitHub)
+
+Uppgiftens syfte
+Syftet är att omsätta kursens moment i praktiken genom att i grupp utveckla ett Python-baserat projekt. Projektet ska vara fritt valt, men varje medlem i gruppen ska:
+Bidra med minst en egen Python-fil.
+
+
+Tydligt demonstrera att de behärskar kursens moment: syntax, variabler, villkor, loopar, funktioner, klasser, moduler, standardbibliotek, externa bibliotek/ramverk och versionshantering.
+
+
+
+Förslag på projektidéer
+Ni väljer själva, men här är exempel:
+Textbaserat spel (t.ex. quiz, äventyrsspel, gissa numret)
+
+
+Datahanteringsprogram (t.ex. enkel kontaktbok, TODO-lista, budgetspårare med fil/databaslagring)
+
+
+Webbskrapare som samlar och presenterar information från en webbsida
+
+
+Mini-API med Flask eller FastAPI (t.ex. för att hantera uppgifter, filmer, eller väderdata)
+
+
+Analysprogram som läser data (CSV/JSON), gör beräkningar och presenterar resultat
+
+
+
+Obligatoriska moment per grupp
+Projektet ska innehålla:
+Klasser (OOP) – minst en klass som används i projektet.
+
+
+Moduler – projektet ska vara uppdelat i flera filer/moduler.
+
+
+Standardbibliotek – minst två delar ska användas (t.ex. datetime, os, json, random).
+
+
+Externa bibliotek – minst ett bibliotek/ramverk utanför standardbiblioteket (t.ex. requests, Flask, matplotlib).
+
+
+Versionshantering (Git/GitHub) – hela gruppen ska aktivt använda GitHub för versionskontroll.
+
+
+Dokumentation – README med:
+
+
+Kort beskrivning av projektet
+
+
+Instruktioner för installation och körning
+
+
+Vem som gjort vilken fil
+
+
+Testning – minst en enhetstest med PyTest.
+
+
+
+Individuella krav
+Varje elev ska i sin egen fil visa att de behärskar:
+Variabler och datatyper
+
+
+Villkor (if/elif/else)
+
+
+Loopar (for/while)
+
+
+Minst en funktion
+
+
+Minst en klass (kan vara en del av det större projektets OOP-struktur)
+
+
+
+Betygskriterier
+Godkänt (G)
+Alla obligatoriska moment finns med.
+
+
+Varje elev har en egen fil som uppfyller de individuella kraven.
+
+
+GitHub har använts för samarbete och versionshantering.
+
+
+Projektet är körbart och dokumenterat.
+
+
+Väl Godkänt (VG)
+För VG krävs alla kriterier för G, samt:
+Avancerad användning av OOP: minst en klasshierarki (arv eller abstrakta klasser) eller tydlig användning av inkapsling.
+
+
+Avancerad användning av externa bibliotek: t.ex. visualisering med matplotlib, en enkel webbtjänst med Flask/FastAPI, eller mer komplex databehandling.
+
+
+Felhantering: systematisk användning av try/except.
+
+
+Tydliga tester: minst två funktioner täcks av PyTest.
+
+
+
+Redovisning
+Presentation i grupp där ni visar projektet (10 minuter).
+
+
+Varje elev presenterar sin egen fil och förklarar vad den gör samt hur den hänger ihop med helheten. 
+
+
+
